@@ -48,8 +48,60 @@
   </servlet-mapping>
   
   
+  <!-- session -->
+  <servlet>
+  	<servlet-name>sessionDemo1</servlet-name>
+  	<servlet-class>web.session.SessionServletDemo1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>sessionDemo1</servlet-name>
+  	<url-pattern>/sessionDemo1</url-pattern>
+  </servlet-mapping>
+  
+   <!-- filter -->
+  <servlet>
+  	<servlet-name>filterDemo1</servlet-name>
+  	<servlet-class>web.filter.FilterServletDemo1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>filterDemo1</servlet-name>
+  	<url-pattern>/filterDemo1</url-pattern>
+  </servlet-mapping>
+  <!-- filter jsp -->
+  <servlet>
+  	<servlet-name>jspfile</servlet-name>
+  	<jsp-file>/filterJsp/filterDemo1.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>jspfile</servlet-name>
+  	<url-pattern>/filterDemo1.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>demo1Filter1</filter-name>
+  	<filter-class>web.filter.Demo1Filter1</filter-class>
+  	<init-param>
+  		<param-name>illgalStr</param-name>
+  		<param-value>猪</param-value>
+  	</init-param>
+  </filter>
+  <filter>
+  	<filter-name>demo1Filter2</filter-name>
+  	<filter-class>web.filter.Demo1Filter2</filter-class>
+  </filter>
+  
+  
+  <filter-mapping>
+  	<filter-name>demo1Filter1</filter-name>
+  	<url-pattern>/filterDemo1</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>demo1Filter2</filter-name>
+  	<url-pattern>/filterDemo1</url-pattern>
+  </filter-mapping>
+  
+  
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
