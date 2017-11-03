@@ -26,7 +26,7 @@ public class SessionServletDemo1 extends HttpServlet{
 		}
 		session.setAttribute("count",count);
 		out.println("you are visiting for the "+count+"  time");
-//		session.invalidate();
+//		session.invalidate();     //immediately invalidate
 		out.close();
 	}
 }
