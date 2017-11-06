@@ -2,7 +2,7 @@ package log4j;
 
 import org.apache.log4j.Logger;
 
-
+//test log4j
 public class Log4jDemo1 {
 	public static void main(String[] args) {
 		Logger log=null;
